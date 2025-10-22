@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+
+
+
+.AllDivSWiper {
+
+    display: flex;
+    align-items: center;
+    margin-Left: 80px;
+    margin-top: 100px
+}
+
+.Headerr {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.TextSwi {
+
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: 30px
+}
+
+.InSwiper {
+    text-align: center
+}
+
+.swiper {
+    margin-left: 1px;
+}
+
+@media (max-width: 768px) {
+
+
+    .AllDivSWiper {
+
+        margin-top: 100px;
+        margin-Left: 5px;
+
+    }
+
+
+    .TextSwi {
+
+        font-size: 60px;
+        font-weight: 500;
+        margin-top: 30px
+    }
+
+    .InSwiper {
+        margin-left: 100px;
+    }
+
+    .swiper {
+        margin-left: 100px;
+    }
+
+}
