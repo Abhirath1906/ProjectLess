@@ -135,7 +135,7 @@ export default function HomePage() {
     return (
 
         <>
-        <div className="animated-bg"></div> 
+            <div className="animated-bg"></div>
             <Layout style={{ minHeight: "100vh" }}>
 
                 <Sider className="theSider" collapsed={!Open} style={{ backgroundColor: "black", color: "white" }}>
