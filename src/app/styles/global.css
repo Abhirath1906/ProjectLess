@@ -1,67 +1,189 @@
 @import "tailwindcss";
 
+/* --- Background khusus Content --- */
+.content-with-bg {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 50px;
+}
 
+/* --- Gambar background --- */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.9; 
+  margin-top: 60px;
+}
+
+/* --- Semua isi konten di atas background --- */
+.content-with-bg > *:not(.background) {
+  
+  z-index: 1;
+}
+
+/* Pastikan elemen utama punya positioning relatif */
+.content-with-bg {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animasi background di belakang konten */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, #ffffff, #f5e8e8d3 30%, #f8f8f842 60%);
+  z-index: 0; /* ubah dari -1 ke 0 */
+  filter: blur(10px);
+  animation: moveBg 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 20% 30%;
+  }
+  50% {
+    background-position: 40% 50%;
+  }
+  100% {
+    background-position: 20% 30%;
+  }
+}
 
 
 .AllDivSWiper {
-
-    display: flex;
-    align-items: center;
-    margin-Left: 80px;
-    margin-top: 100px
+ 
+  margin-left: 80px;
+  margin-top: 100px;
 }
 
 .Headerr {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+
+.InShow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  width: fit-content;
+  margin-top: 100px;
+  margin-left: 1030px;
+  border: solid black 2px;
+  
+}
+
+.TheInput{
+  width: 600px;
+  
+}
+
+
+.Keranjang{
+  font-size: 50px;
+  margin-left: 65px;
 }
 
 .TextSwi {
+  font-size: 90px;
+  font-weight: 300;
+  margin-top: -600px;
+  position: absolute;
 
-    font-size: 100px;
-    font-weight: 500;
-    margin-top: 30px
 }
 
+
 .InSwiper {
-    text-align: center
+  text-align: center;
+;
 }
 
 .swiper {
-    margin-left: 1px;
+  margin-left: 1px;
+  
 }
 
+
+.cosmetic{
+    font-size: 20px;
+    margin-top: -80px;
+    margin-left: 10px;
+    color: black;
+}
+
+
+.TheSwiper{
+  margin-top: 780px;
+  
+  
+}
+
+/* --- Responsif --- */
 @media (max-width: 768px) {
+  .AllDivSWiper {
+    margin-top: 100px;
+    margin-left: 5px;
+  }
 
 
-    .AllDivSWiper {
+  
+.TheInput{
+  width: 200px;
+  
+}
 
-        margin-top: 100px;
-        margin-Left: 5px;
+.Keranjang{
+  font-size: 50px;
+  margin-left: 0px;
+}
 
-    }
+  .TextSwi {
+    font-size: 60px;
+    font-weight: 500;
+    margin-top: -350px;
+  }
 
+  .TheSwiper{
+    margin-top: 450px;
+    
+    
+  }
 
-    .TextSwi {
+  .InShow{
+    margin-left: 500px;
+  }
+  
 
-        font-size: 60px;
-        font-weight: 500;
-        margin-top: 30px
-    }
+  .cosmetic{
+    font-size: 20px;
+    margin-top: -60px;
+    font-weight: 300;
 
-    .InSwiper {
-        margin-left: 100px;
-    }
+}
 
-    .swiper {
-        margin-left: 100px;
-    }
+  .InSwiper {
+    margin-left: 100px;
+  }
 
+  .swiper {
+    margin-left: 100px;
+  }
 }
